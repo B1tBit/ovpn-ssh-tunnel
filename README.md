@@ -11,6 +11,7 @@
 Здесь есть два пути: 
 - Вход по паролю (*всегда указан в дашборде VPS*);
 - Вход по ключу (*ниже я покажу как сделать аутентификацию по ключу*).
+
 Для этой задачи в консоли требуется написать one-line:
 ```
 ssh-keygen -a 1000 -b 4096 -o -t rsa && cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys && echo -e "SSH key for \e[1;32m$(hostname).key\e[0m:\n$(cat ~/.ssh/id_rsa)" && systemctl restart ssh
